@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Potpie</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./styles/chat.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Potpie</a></div>
+            <ul class="nav-links">
+                <li><a href="../projects/index.html">Projects</a></li>
+                <li><a href="./index.html" class="active">Conversations</a></li>
+                <li><a href="../search">Search</a></li>
+                <li class="user-profile">
+                    <img src="../assets/placeholder-avatar.png" alt="User Profile" class="avatar">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="chat-header">
+            <div class="chat-info">
+                <h1>Code Review for Feature Branch</h1>
+                <div class="meta-info">
+                    <div class="project-info">
+                        <span class="label">Project:</span>
+                        <span class="value">example/repo</span>
+                    </div>
+                    <div class="branch-info">
+                        <span class="label">Branch:</span>
+                        <span class="value">feature/user-auth</span>
+                    </div>
+                    <div class="agent-tag code-review">Code Review Agent</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message-list">
+                <div class="message user">
+                    <div class="message-content">
+                        <p>Can you review the changes in the auth module?</p>
+                    </div>
+                    <div class="message-meta">
+                        <span class="timestamp">15:30</span>
+                    </div>
+                </div>
+
+                <div class="message agent">
+                    <div class="message-content">
+                        <p>I've reviewed the changes in the auth module. Here are my findings:</p>
+                        <ol>
+                            <li>The password hashing implementation looks secure, using bcrypt with appropriate salt rounds.</li>
+                            <li>There's a potential issue with the session timeout not being properly handled in the middleware.</li>
+                            <li>The token refresh logic could be improved to prevent race conditions.</li>
+                        </ol>
+                        <p>Would you like me to provide more details about any of these points?</p>
+                    </div>
+                    <div class="message-meta">
+                        <span class="timestamp">15:31</span>
+                    </div>
+                </div>
+
+                <div class="message user">
+                    <div class="message-content">
+                        <p>Yes, please explain more about the session timeout issue.</p>
+                    </div>
+                    <div class="message-meta">
+                        <span class="timestamp">15:32</span>
+                    </div>
+                </div>
+
+                <div class="message agent">
+                    <div class="message-content">
+                        <p>The current session timeout implementation has the following issues:</p>
+                        <pre><code>// Current implementation
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    cookie: { maxAge: 3600000 } // 1 hour
+}));</code></pre>
+                        <p>The issue is that the session middleware doesn't properly handle:</p>
+                        <ul>
+                            <li>Session extension on activity</li>
+                            <li>Cleanup of expired sessions</li>
+                            <li>Multiple device sessions</li>
+                        </ul>
+                        <p>I recommend implementing a more robust solution using Redis for session storage and proper session management middleware.</p>
+                    </div>
+                    <div class="message-meta">
+                        <span class="timestamp">15:33</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-input">
+                <textarea placeholder="Type your message here..."></textarea>
+                <button class="send-button">Send</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Potpie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

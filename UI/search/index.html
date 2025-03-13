@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Potpie</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./styles/search.css">
+    <script src="../scripts/navigation.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Potpie</a></div>
+            <ul class="nav-links">
+                <li><a href="../projects/index.html">Projects</a></li>
+                <li><a href="../conversations/index.html">Conversations</a></li>
+                <li><a href="#" class="active">Search</a></li>
+                <li class="user-profile">
+                    <img src="../assets/placeholder-avatar.png" alt="User Profile" class="avatar">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="search-header">
+            <h1>Code Search</h1>
+            <div class="search-type-selector">
+                <button class="search-type-btn active" data-type="keyword">Keyword</button>
+                <button class="search-type-btn" data-type="regex">Regex</button>
+                <button class="search-type-btn" data-type="definition">Definition</button>
+                <button class="search-type-btn" data-type="reference">Reference</button>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input" placeholder="Search in codebase...">
+                <button class="search-button">Search</button>
+            </div>
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label>Project:</label>
+                    <select class="project-filter">
+                        <option value="all">All Projects</option>
+                        <option value="example/repo">example/repo</option>
+                        <option value="user/project-b">user/project-b</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>File Type:</label>
+                    <select class="filetype-filter">
+                        <option value="all">All Files</option>
+                        <option value=".py">.py</option>
+                        <option value=".js">.js</option>
+                        <option value=".html">.html</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-results">
+            <div class="result-stats">Found 3 results in 0.15 seconds</div>
+            
+            <div class="result-item">
+                <div class="result-header">
+                    <span class="file-path">app/modules/auth/models.py</span>
+                    <span class="match-count">2 matches</span>
+                </div>
+                <div class="code-preview">
+                    <pre><code><span class="line-number">15</span>    def authenticate_user(self, username: str, password: str):
+<span class="line-number">16</span>        <span class="highlight">user = self.get_user_by_username(username)</span>
+<span class="line-number">17</span>        if not user or not self.verify_password(password, user.password):</code></pre>
+                </div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-header">
+                    <span class="file-path">app/modules/users/service.py</span>
+                    <span class="match-count">1 match</span>
+                </div>
+                <div class="code-preview">
+                    <pre><code><span class="line-number">42</span>    async def create_user(self, user_data: UserCreate):
+<span class="line-number">43</span>        <span class="highlight">existing = await self.get_user_by_username(user_data.username)</span>
+<span class="line-number">44</span>        if existing:</code></pre>
+                </div>
+            </div>
+
+            <div class="result-pagination">
+                <button class="pagination-btn" disabled>Previous</button>
+                <span class="page-info">Page 1 of 1</span>
+                <button class="pagination-btn" disabled>Next</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Potpie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

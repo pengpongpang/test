@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potpie - Code Analysis Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Potpie</div>
+            <ul class="nav-links">
+                <li><a href="projects/index.html">Projects</a></li>
+                <li><a href="conversations/index.html">Conversations</a></li>
+                <li><a href="search/index.html">Search</a></li>
+                <li class="user-profile">
+                    <img src="placeholder-avatar.png" alt="User Profile" class="avatar">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="projects-section" id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <a href="projects/index.html" style="text-decoration: none; color: inherit;">
+                        <h3>Project Name</h3>
+                        <p>Repository: example/repo</p>
+                        <p>Branch: main</p>
+                        <div class="project-status">Status: Active</div>
+                    </a>
+                </div>
+                <!-- More project cards would be dynamically added here -->
+            </div>
+        </section>
+
+        <section class="conversations-section" id="conversations">
+            <h2>Recent Conversations</h2>
+            <div class="conversation-list">
+                <div class="conversation-item">
+                    <a href="conversations/chat.html" style="text-decoration: none; color: inherit;">
+                        <div class="conversation-header">
+                            <h3>Conversation Title</h3>
+                            <span class="timestamp">2024-01-20 14:30</span>
+                        </div>
+                        <p>Project: example/repo</p>
+                        <div class="agent-tag">Agent: QNA_AGENT</div>
+                    </a>
+                </div>
+                <!-- More conversation items would be dynamically added here -->
+            </div>
+        </section>
+
+        <section class="search-section" id="search">
+            <h2>Code Search</h2>
+            <div class="search-container">
+                <form action="search/index.html" method="get">
+                    <input type="text" class="search-input" name="query" placeholder="Search codebase...">
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+            <div class="search-results">
+                <!-- Search results would be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Potpie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

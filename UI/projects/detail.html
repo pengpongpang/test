@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail - Potpie</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="./styles/detail.css">
+    <script src="../scripts/navigation.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Potpie</a></div>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Projects</a></li>
+                <li><a href="../conversations/index.html">Conversations</a></li>
+                <li><a href="../search/index.html">Search</a></li>
+                <li class="user-profile">
+                    <img src="../assets/placeholder-avatar.png" alt="User Profile" class="avatar">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="project-detail-header">
+            <div class="project-title-section">
+                <h1>Project Name</h1>
+                <div class="project-status active">Active</div>
+            </div>
+            <div class="project-actions">
+                <button class="action-btn primary">Start Analysis</button>
+                <button class="action-btn">Settings</button>
+            </div>
+        </div>
+
+        <div class="project-info-grid">
+            <div class="info-card repository-info">
+                <h2>Repository Information</h2>
+                <div class="info-content">
+                    <div class="info-item">
+                        <span class="label">Repository URL:</span>
+                        <span class="value">https://github.com/example/repo</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Default Branch:</span>
+                        <span class="value">main</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Last Sync:</span>
+                        <span class="value">2024-01-20 15:30 UTC</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card analysis-info">
+                <h2>Analysis Status</h2>
+                <div class="info-content">
+                    <div class="info-item">
+                        <span class="label">Last Analysis:</span>
+                        <span class="value">2024-01-20 16:00 UTC</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Status:</span>
+                        <span class="value status-complete">Complete</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Files Analyzed:</span>
+                        <span class="value">1,234</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card branch-info">
+                <h2>Active Branches</h2>
+                <div class="branch-list">
+                    <div class="branch-item">
+                        <div class="branch-name">main</div>
+                        <div class="branch-details">
+                            <span class="commit-info">Last commit: 2d3f4a5</span>
+                            <span class="update-time">1 hour ago</span>
+                        </div>
+                    </div>
+                    <div class="branch-item">
+                        <div class="branch-name">feature/user-auth</div>
+                        <div class="branch-details">
+                            <span class="commit-info">Last commit: 8e9f0b2</span>
+                            <span class="update-time">3 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card activity-info">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon analysis"></div>
+                        <div class="activity-details">
+                            <div class="activity-title">Code Analysis Completed</div>
+                            <div class="activity-time">1 hour ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon sync"></div>
+                        <div class="activity-details">
+                            <div class="activity-title">Repository Synchronized</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Potpie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

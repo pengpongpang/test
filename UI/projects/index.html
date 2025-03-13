@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Potpie</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./styles/projects.css">
+    <script src="../scripts/navigation.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Potpie</a></div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Projects</a></li>
+                <li><a href="../conversations/index.html">Conversations</a></li>
+                <li><a href="../search/index.html">Search</a></li>
+                <li class="user-profile">
+                    <img src="../assets/placeholder-avatar.png" alt="User Profile" class="avatar">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="projects-header">
+            <h1>Projects</h1>
+            <button class="create-project-btn">Create New Project</button>
+        </div>
+
+        <div class="project-filters">
+            <div class="filter-group">
+                <label>Status:</label>
+                <select class="status-filter">
+                    <option value="all">All</option>
+                    <option value="ready">Ready</option>
+                    <option value="processing">Processing</option>
+                    <option value="error">Error</option>
+                </select>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search projects...">
+            </div>
+        </div>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Example Project</h3>
+                    <span class="status-badge ready">Ready</span>
+                </div>
+                <div class="project-info">
+                    <div class="info-item">
+                        <span class="label">Repository:</span>
+                        <span class="value">example/repo</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Branch:</span>
+                        <span class="value">main</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Last Updated:</span>
+                        <span class="value">2024-01-20</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="./detail.html" class="action-btn view">View Details</a>
+                    <button class="action-btn chat">Start Chat</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Processing Project</h3>
+                    <span class="status-badge processing">Processing</span>
+                </div>
+                <div class="project-info">
+                    <div class="info-item">
+                        <span class="label">Repository:</span>
+                        <span class="value">user/project-b</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Branch:</span>
+                        <span class="value">develop</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Last Updated:</span>
+                        <span class="value">2024-01-19</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="./detail.html" class="action-btn view">View Details</a>
+                    <button class="action-btn chat" disabled>Start Chat</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Potpie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

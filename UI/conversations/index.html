@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversations - Potpie</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./styles/conversations.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Potpie</a></div>
+            <ul class="nav-links">
+                <li><a href="../projects/index.html">Projects</a></li>
+                <li><a href="#" class="active">Conversations</a></li>
+                <li><a href="../search/index.html">Search</a></li>
+                <li class="user-profile">
+                    <img src="../assets/placeholder-avatar.png" alt="User Profile" class="avatar">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="conversations-header">
+            <h1>Conversations</h1>
+            <div class="filter-group">
+                <select class="agent-filter">
+                    <option value="all">All Agents</option>
+                    <option value="qna">QNA Agent</option>
+                    <option value="code_review">Code Review Agent</option>
+                    <option value="custom">Custom Agent</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="conversation-timeline">
+            <div class="conversation-item">
+                <a href="./chat.html" class="conversation-link">
+                <div class="conversation-header">
+                    <h3>Code Review for Feature Branch</h3>
+                    <span class="timestamp">2024-01-20 15:45</span>
+                </div>
+                <div class="conversation-details">
+                    <div class="project-info">
+                        <span class="label">Project:</span>
+                        <span class="value">example/repo</span>
+                    </div>
+                    <div class="branch-info">
+                        <span class="label">Branch:</span>
+                        <span class="value">feature/user-auth</span>
+                    </div>
+                    <div class="agent-tag code-review">Code Review Agent</div>
+                </div>
+                <div class="conversation-preview">
+                    Last message: Reviewed changes in auth module. Found 2 potential issues...
+                </div>
+                </a>
+            </div>
+
+            <div class="conversation-item">
+                <a href="./chat.html" class="conversation-link">
+                <div class="conversation-header">
+                    <h3>API Documentation Help</h3>
+                    <span class="timestamp">2024-01-20 14:30</span>
+                </div>
+                <div class="conversation-details">
+                    <div class="project-info">
+                        <span class="label">Project:</span>
+                        <span class="value">example/repo</span>
+                    </div>
+                    <div class="branch-info">
+                        <span class="label">Branch:</span>
+                        <span class="value">main</span>
+                    </div>
+                    <div class="agent-tag qna">QNA Agent</div>
+                </div>
+                <div class="conversation-preview">
+                    Last message: The API endpoint for user authentication accepts the following parameters...
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="pagination-btn" disabled>Previous</button>
+            <span class="page-info">Page 1 of 5</span>
+            <button class="pagination-btn">Next</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Potpie. All rights reserved.</p>
+    </footer>
+</body>
+</html>
